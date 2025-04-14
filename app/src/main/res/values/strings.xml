@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">Formulario</string>
+    <string name="text_var_b">b</string>
+    <string name="text_bar_c">c</string>
+    <string name="spinner_text">Selecciona una fórmula:</string>
+    <string name="result">Resultado:</string>
+    <string name="button_calculate">Calcular</string>
+    <string name="text_var_a">a</string>
+    <string name="hint_var_a">Variable a</string>
+    <string name="hint_var_b">Variable b</string>
+    <string name="hint_var_c">Variable c</string>
+    <string name="select_formula_error">Selecciona una formula</string>
+
+    <string name="quadratic_formula_name">Ecuación cuadrática</string>
+    <string name="variable_a">Coeficiente a</string>
+    <string name="variable_b">Coeficiente b</string>
+    <string name="variable_c">Coeficiente c</string>
+
+    <!-- Existing strings -->
+    <string name="parabolic_height_name">Altura máxima parabólica</string>
+    <string name="initial_velocity">Velocidad inicial</string>
+    <string name="angle">Ángulo</string>
+    <string name="gravity">Gravedad</string>
+
+    <string name="r3_magnitude_name">Magnitud vector R³</string>
+    <string name="x_component">X</string>
+    <string name="y_component">Y</string>
+    <string name="z_component">Z</string>
+
+    <string name="potential_energy_name">Energía potencial</string>
+    <string name="mass">Masa</string>
+    <string name="height">Altura</string>
+
+    <string name="invalid_input_error">Ingresa números válidos</string>
+    <string name="no_real_roots">No hay raíces reales</string>
+    <string name="no_results">No hay resultados válidos</string>
+    <string name="calculation_error">Error desconocido\n</string>
+
+
+    <string name="result_template">%s</string>
+    <string name="multiple_results">Multiple results - check logs</string>
 </resources>
