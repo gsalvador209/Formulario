@@ -24,10 +24,10 @@ class FormulaSheet(private val stringProvider: StringProvider) {
         else -> null
     }
 
-    // Existing quadratic formula
     private val quadraticFormula =
         Formula(
             name = stringProvider.getString(R.string.quadratic_formula_name),
+            image = R.drawable.quadratic_formula,
             var1Name = stringProvider.getString(R.string.variable_a),
             var2Name = stringProvider.getString(R.string.variable_b),
             var3Name = stringProvider.getString(R.string.variable_c),
@@ -48,6 +48,7 @@ class FormulaSheet(private val stringProvider: StringProvider) {
     private val parabolicHeight =
     Formula(
         name = stringProvider.getString(R.string.parabolic_height_name),
+        image = R.drawable.parabolic_height,
         var1Name = stringProvider.getString(R.string.initial_velocity),
         var2Name = stringProvider.getString(R.string.angle),
         var3Name = stringProvider.getString(R.string.gravity),
@@ -62,6 +63,7 @@ class FormulaSheet(private val stringProvider: StringProvider) {
     private val r3Magnitude =
         Formula(
             name = stringProvider.getString(R.string.r3_magnitude_name),
+            image = R.drawable.r3_magnitude,
             var1Name = stringProvider.getString(R.string.x_component),
             var2Name = stringProvider.getString(R.string.y_component),
             var3Name = stringProvider.getString(R.string.z_component),
@@ -75,11 +77,17 @@ class FormulaSheet(private val stringProvider: StringProvider) {
     private val potentialEnergy =
         Formula(
             name = stringProvider.getString(R.string.potential_energy_name),
+            image = R.drawable.potential_energy,
             var1Name = stringProvider.getString(R.string.mass),
             var2Name = stringProvider.getString(R.string.height),
             var3Name = stringProvider.getString(R.string.gravity),
             calculate = { m, h, g -> // Changed parameter order to match variableNames
-                listOf(m * g * h)
+                when{
+                    (m < 0) -> emptyList()
+                    else -> listOf(m * g * h)
+                }
+
+
             }
         )
 

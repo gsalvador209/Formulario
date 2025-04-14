@@ -61,39 +61,57 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/app_name"
-        android:textSize="24sp"
+        android:textSize="32sp"
         app:layout_constraintEnd_toStartOf="@+id/glEnd"
         app:layout_constraintStart_toStartOf="@+id/glStart"
         app:layout_constraintTop_toTopOf="@+id/glTop" />
 
-    <TextView
-        android:id="@+id/tvSelection"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvInstructions"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/spinner_text"
-        app:layout_constraintEnd_toStartOf="@+id/glEnd"
-        app:layout_constraintStart_toStartOf="@+id/glStart"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
-
-    <Spinner
-        android:id="@+id/spFormula"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        android:layout_marginTop="8dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@id/ivFormula"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
         app:layout_constraintStart_toStartOf="@id/glStart"
-        app:layout_constraintTop_toBottomOf="@+id/tvSelection" />
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
 
-    <ImageView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvSelection"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/spinner_text"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                android:textColor="?attr/colorOnSurface" />
+
+            <Spinner
+                android:id="@+id/spFormula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_stroke"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+        <ImageView
         android:id="@+id/ivFormula"
         android:layout_width="300dp"
         android:layout_height="150dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintEnd_toStartOf="@+id/glEnd"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/glStart"
-        app:layout_constraintTop_toBottomOf="@+id/spFormula"
+        app:layout_constraintTop_toBottomOf="@+id/cvInstructions"
         app:srcCompat="@android:drawable/title_bar" />
 
     <TextView
@@ -119,7 +137,7 @@
 
     <TextView
         android:id="@+id/tvSecondResult"
-        android:layout_width="331dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/glBottom"

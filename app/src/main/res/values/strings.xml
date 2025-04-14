@@ -16,7 +16,6 @@
     <string name="variable_b">Coeficiente b</string>
     <string name="variable_c">Coeficiente c</string>
 
-    <!-- Existing strings -->
     <string name="parabolic_height_name">Altura máxima parabólica</string>
     <string name="initial_velocity">Velocidad inicial</string>
     <string name="angle">Ángulo</string>

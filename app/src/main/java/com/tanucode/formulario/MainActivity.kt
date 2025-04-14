@@ -78,12 +78,22 @@ class MainActivity : AppCompatActivity() {
                 if(isSpinneInitialCall){
                     isSpinneInitialCall = false
                     setVisibleFields(0)
+                    binding.ivFormula.visibility = View.GONE
                     return
                 }
                 clearFields()
                 currentFormula = formulaSheet.getFormula(position-1) //Se ignora el elemento vacio
 
                 currentFormula?.let { formula ->
+                    if (formula.image != 0){
+                        binding.ivFormula.setImageResource(formula.image)
+                        binding.ivFormula.visibility = View.VISIBLE
+                    }else{
+                        binding.ivFormula.visibility = View.GONE
+                    }
+
+
+
                     setVisibleFields(formula.variableNames.size)
                     updateFieldsLabels(formula)
                     if (position == 4 || position == 2){ //Para la energía potencial
@@ -92,12 +102,15 @@ class MainActivity : AppCompatActivity() {
                     validateInputs()
                 } ?: run {
                     setVisibleFields(0)
+                    binding.ivFormula.visibility = View.GONE
                     validateInputs()
                 }
 
             }
 
-            override fun onNothingSelected(parent: AdapterView<*>?) {}
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                binding.ivFormula.visibility = View.GONE
+            }
 
         }
 
@@ -108,6 +121,10 @@ class MainActivity : AppCompatActivity() {
         binding.etVarA.text?.clear()
         binding.etVarB.text?.clear()
         binding.etVarC.text?.clear()
+
+        //image
+        //binding.ivFormula.setImageResource(null)
+        binding.ivFormula.visibility = View.GONE
 
         // Clear results
         binding.tvFirstResult.text = ""
