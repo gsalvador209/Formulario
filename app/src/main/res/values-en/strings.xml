@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Formulas</string>
+    <string name="text_var_b">b</string>
+    <string name="text_bar_c">c</string>
+    <string name="spinner_text">Select a formula:</string>
+    <string name="result">Result:</string>
+    <string name="button_calculate">Calculate</string>
+    <string name="text_var_a">a</string>
+    <string name="hint_var_a">Variable a</string>
+    <string name="hint_var_b">Variable b</string>
+    <string name="hint_var_c">Variable c</string>
+    <string name="select_formula_error">Select a formula</string>
+
+    <!-- Quadratic Formula -->
+    <string name="quadratic_formula_name">Quadratic equation</string>
+    <string name="variable_a">Coefficient a</string>
+    <string name="variable_b">Coefficient b</string>
+    <string name="variable_c">Coefficient c</string>
+
+    <!-- Parabolic Height -->
+    <string name="parabolic_height_name">Maximum projectile height</string>
+    <string name="initial_velocity">Initial velocity</string>
+    <string name="angle">Angle</string>
+    <string name="gravity">Gravity</string>
+
+    <!-- Vector Magnitude -->
+    <string name="r3_magnitude_name">R³ vector magnitude</string>
+    <string name="x_component">X</string>
+    <string name="y_component">Y</string>
+    <string name="z_component">Z</string>
+
+    <!-- Potential Energy -->
+    <string name="potential_energy_name">Potential energy</string>
+    <string name="mass">Mass</string>
+    <string name="height">Height</string>
+
+    <!-- Errors -->
+    <string name="invalid_input_error">Enter valid numbers</string>
+    <string name="no_real_roots">No real roots</string>
+    <string name="no_results">No valid results</string>
+    <string name="calculation_error">Unknown error\n</string>
+
+    <!-- Templates -->
+    <string name="result_template">%s</string>
+    <string name="multiple_results">Multiple results - check logs</string>
+</resources>
